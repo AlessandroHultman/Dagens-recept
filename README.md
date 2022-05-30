@@ -1,2 +1,2 @@
-# Var-ska-vi-ata
-A guide to where to eat
+# Recipe of the day
+A guide to what to cook
