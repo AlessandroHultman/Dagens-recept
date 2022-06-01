@@ -92,3 +92,4 @@ iOSInjectionProject/
 
 # Misc
 .DS_Store
+assets/scripts/node_modules
