@@ -1,3 +1,4 @@
+// node is only used for development purposes
 // import { writeFile } from 'fs';
 
 // export function saveData(data, file) {
@@ -24,6 +25,6 @@ export const getElement = (selector) => {
 
   if (element) return element
   throw Error(
-    `Error: there is no ${selector} class`
+    `There is no ${selector} class`
   )
 }

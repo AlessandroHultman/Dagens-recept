@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipe</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <!-- normalize -->
-    <link rel="stylesheet" href="../styles/normalize.css" />
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="../styles/index.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+  <!-- normalize -->
+  <link rel="stylesheet" href="../styles/normalize.css" />
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="../styles/index.css" />
+</head>
 
-  <body>
-    <!-- nav -->
-    <nav class="navbar">
-      <div class="nav-center">
-        <div class="nav-header">
-          <a href="../../index.html" class="nav-logo">
-            <img src="../images/logo.png" alt="recipe of the day" />
-          </a>
-          <button class="nav-btn btn">
-            <i class="fas fa-align-justify"></i>
-          </button>
-        </div>
-        <div class="nav-links">
-          <a href="../../index.html" class="nav-link"> home </a>
-          <a href="about.html" class="nav-link"> about </a>
-          <a href="recipes.html" class="nav-link"> recipes </a>
+<body>
+  <!-- nav -->
+  <nav class="navbar">
+    <div class="nav-center">
+      <div class="nav-header">
+        <a href="../../index.html" class="nav-logo">
+          <img src="../images/logo.png" alt="recipe of the day" />
+        </a>
+        <button class="nav-btn btn">
+          <i class="fas fa-align-justify"></i>
+        </button>
+      </div>
+      <div class="nav-links">
+        <a href="../../index.html" class="nav-link"> home </a>
+        <a href="about.html" class="nav-link"> about </a>
+        <a href="recipes.html" class="nav-link"> recipes </a>
 
-          <div class="nav-link contact-link">
-            <a href="contact.html" class="btn"> contact </a>
-          </div>
+        <div class="nav-link contact-link">
+          <a href="contact.html" class="btn"> contact </a>
         </div>
       </div>
-    </nav>
-    <!-- end of nav -->
-    <main class="page">
-      <div class="recipe-page">
-        <!-- recipe info -->
-        <section class="recipe-hero" id="recipe-section"></section>
-        <!-- recipe instructions  -->
-        <section class="recipe-content">
-          <article id="instructions"></article>
-          <article class="second-column" id="ingredients"></article>
-        </section>
-      </div>
-    </main>
-    <!-- footer -->
-    <footer class="page-footer">
-      <p> © 2022 Recipe of the day Built by Alessandro Hultman </p>
-    </footer>
-    <script src="../scripts/recipe.js" type="module"></script>
-  </body>
+    </div>
+  </nav>
+  <!-- end of nav -->
+  <main class="page">
+    <div class="recipe-page">
+      <!-- recipe info -->
+      <section class="recipe-hero" id="recipe-section"></section>
+      <!-- recipe instructions  -->
+      <section class="recipe-content">
+        <article id="instructions"></article>
+        <article class="second-column" id="ingredients"></article>
+      </section>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="page-footer">
+    <p> © 2022 Recipe of the day Built by Alessandro Hultman </p>
+  </footer>
+  <script src="../scripts/recipe.js" type="module"></script>
+  <script src="../scripts/toggle.js" type="module"></script>
+</body>
 
 </html>

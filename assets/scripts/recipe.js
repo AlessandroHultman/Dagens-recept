@@ -1,16 +1,8 @@
-// only used for development purposes
 import data from "./data.json" assert {type: "json"};
-import { getElement } from "./utils.mjs";
 
 let jsonData = data.data;
 
-// nav button toggle effect on low screen sizes
-const links = getElement('.nav-links');
-const navBtnDOM = getElement('.nav-btn');
-navBtnDOM.addEventListener('click', () => {
-  links.classList.toggle('show-links')
-});
-
+// builds article
 function buildArticle(classAttr, type, value) {
   let article = document.createElement("article");
   let header = document.createElement("h5");
@@ -27,7 +19,7 @@ function buildArticle(classAttr, type, value) {
   return article;
 }
 
-// Builds a single recipe page out of the first recipe from the api call
+// builds a single recipe page out of the first recipe from the api call
 function buildSingleRecipe() {
   let recipeSection = document.getElementById("recipe-section");
   let img = document.createElement("img");
@@ -53,13 +45,14 @@ function buildSingleRecipe() {
   let tags = document.createElement("p");
   tags.setAttribute("class", "recipe-tags");
   tags.innerText = "Tags : ";
-  
+
   recipeInfo.appendChild(recipeIcons);
   recipeInfo.appendChild(tags);
   recipeSection.appendChild(img);
   recipeSection.appendChild(recipeInfo);
 }
 
+// build instruction container
 function buildInstructionsContainer() {
   let instructionSection = document.getElementById("instructions");
   let header = document.createElement("h4");
@@ -71,7 +64,7 @@ function buildInstructionsContainer() {
     div.setAttribute("class", "single-instruction");
     let header1 = document.createElement("header");
     let step = document.createElement("p");
-    step.innerText = `step ${i+1}`;
+    step.innerText = `step ${i + 1}`;
     header1.appendChild(step);
     header1.appendChild(document.createElement("div"));
     div.appendChild(header1);
@@ -82,6 +75,7 @@ function buildInstructionsContainer() {
   }
 }
 
+// builds ingredient column
 function buildSecondColumn() {
   let secondColumn = document.getElementById("ingredients");
 
@@ -98,7 +92,9 @@ function buildSecondColumn() {
   secondColumn.appendChild(div);
 }
 
-buildSingleRecipe();
-buildInstructionsContainer();
-buildSecondColumn();
+window.onload = function () {
+  buildSingleRecipe();
+  buildInstructionsContainer();
+  buildSecondColumn();
+}
 
