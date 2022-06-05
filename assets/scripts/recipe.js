@@ -3,8 +3,8 @@ import data from "./data.json" assert {type: "json"};
 let jsonData = data.data;
 
 // builds article
-function buildArticle(classAttr, type, value) {
-  let article = document.createElement("article");
+export function buildArticle(classAttr, type, value) {
+let article = document.createElement("article");
   let header = document.createElement("h5");
   let para = document.createElement("p");
   header.innerText = type;
@@ -20,7 +20,7 @@ function buildArticle(classAttr, type, value) {
 }
 
 // builds a single recipe page out of the first recipe from the api call
-function buildSingleRecipe() {
+export function buildSingleRecipe(jsonData) {
   let recipeSection = document.getElementById("recipe-section");
   let img = document.createElement("img");
   img.setAttribute("src", jsonData[0]["image"]);
@@ -53,7 +53,7 @@ function buildSingleRecipe() {
 }
 
 // build instruction container
-function buildInstructionsContainer() {
+export function buildInstructionsContainer(jsonData) {
   let instructionSection = document.getElementById("instructions");
   let header = document.createElement("h4");
   header.innerText = "instructions";
@@ -76,7 +76,7 @@ function buildInstructionsContainer() {
 }
 
 // builds ingredient column
-function buildSecondColumn() {
+export function buildSecondColumn(jsonData) {
   let secondColumn = document.getElementById("ingredients");
 
   let div = document.createElement("div");
@@ -93,8 +93,7 @@ function buildSecondColumn() {
 }
 
 window.onload = function () {
-  buildSingleRecipe();
-  buildInstructionsContainer();
-  buildSecondColumn();
+  buildSingleRecipe(jsonData);
+  buildInstructionsContainer(jsonData);
+  buildSecondColumn(jsonData);
 }
-

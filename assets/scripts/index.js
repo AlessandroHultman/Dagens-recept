@@ -5,8 +5,8 @@ import { setAttributes, getElement } from "./utils.js";
 const searchBtn = getElement('.searchButton');
 searchBtn.addEventListener('click', async () => {
   let searchTerm = document.getElementById("search");
-  let url = `https://recipesapi2.p.rapidapi.com/recipes/${searchTerm.value}?maxRecipes=2`;
-  let data =  await fetchData(url);
+  let url = `https://recipesapi2.p.rapidapi.com/recipes/${searchTerm.value}?maxRecipes=6`;
+  let data = await fetchData(url);
   let jsonData = data.data;
   displayTags();
   buildRecipesList(jsonData);
